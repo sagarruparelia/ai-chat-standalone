@@ -1,11 +1,60 @@
-# React + TypeScript + Vite
+# AI Chat Standalone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, standalone AI chat application built with React, TypeScript, and Vite. Features real-time streaming responses, multiple chat sessions, location awareness, and beautiful light/dark themes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🚀 **Real-time Streaming** - SSE-based streaming for live AI responses
+- 💬 **Multiple Sessions** - Create and manage multiple concurrent chats
+- 📝 **Markdown Support** - Beautiful markdown rendering with code highlighting
+- 📍 **Location Aware** - Browser geolocation with IP-based fallback
+- 💾 **Local Persistence** - 5-day chat history retention
+- 🎨 **Theme Support** - Light and dark themes with smooth transitions
+- 🔒 **Privacy First** - All data stored locally
+- 📱 **Responsive Design** - Works on desktop and mobile
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Deploy to S3
+npm run deploy
+```
+
+## Documentation
+
+- **[CHAT_GUIDE.md](./CHAT_GUIDE.md)** - Complete guide to the chat application
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - S3 deployment instructions
+
+## API Configuration
+
+**Default Server**: `https://example.com/v1/chat`
+
+Override via URL parameter:
+```
+https://your-app.com/?server=https://custom-api.com/v1/chat
+```
+
+See [CHAT_GUIDE.md](./CHAT_GUIDE.md) for full API details.
+
+## Tech Stack
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **React Markdown** - Markdown rendering
+- **@microsoft/fetch-event-source** - SSE streaming
 
 ## React Compiler
 

@@ -1,0 +1,112 @@
+.chat-message {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-message.user {
+  background-color: var(--user-message-bg, rgba(100, 108, 255, 0.1));
+}
+
+.chat-message.assistant {
+  background-color: var(--assistant-message-bg, var(--card-bg));
+}
+
+.message-avatar {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.message-role {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.message-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.message-text {
+  color: var(--text-color);
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.message-text p {
+  margin: 0.5rem 0;
+}
+
+.message-text p:first-child {
+  margin-top: 0;
+}
+
+.message-text p:last-child {
+  margin-bottom: 0;
+}
+
+.message-text code {
+  background-color: var(--button-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.message-text pre {
+  background-color: var(--button-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.message-text pre code {
+  background: none;
+  padding: 0;
+}
+
+.message-text ul,
+.message-text ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.message-text a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.message-text a:hover {
+  color: var(--primary-hover);
+}
